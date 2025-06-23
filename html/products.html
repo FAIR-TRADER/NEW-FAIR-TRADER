@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공정무역 제품 - Fair Trade Korea</title>
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo" onclick="location.href='main.html'">
+                <h1>Fair Trade Korea</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="main.html">홈</a></li>
+                    <li><a href="about.html">공정무역 소개</a></li>
+                    <li><a href="products.html" class="active">제품</a></li>
+                    <li><a href="contact.html">문의</a></li>
+                    <li><a href="#" onclick="showLoginPopup()">로그인</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 페이지 제목 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>공정무역 제품</h1>
+                <p>윤리적이고 지속가능한 제품들을 만나보세요</p>
+            </div>
+        </section>
+
+        <!-- 제품 필터 -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('all')">전체</button>
+                    <button class="filter-btn" onclick="filterProducts('coffee')">커피</button>
+                    <button class="filter-btn" onclick="filterProducts('chocolate')">초콜릿</button>
+                    <button class="filter-btn" onclick="filterProducts('tea')">차</button>
+                    <button class="filter-btn" onclick="filterProducts('sugar')">설탕</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 제품 목록 -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- 커피 제품들 -->
+                    <div class="product-card" data-category="coffee">
+                        <img src="/placeholder.svg?height=250&width=300" alt="에티오피아 유기농 커피">
+                        <div class="product-info">
+                            <h3>에티오피아 유기농 커피</h3>
+                            <p class="product-origin">원산지: 에티오피아</p>
+                            <p class="product-description">고산지대에서 자란 프리미엄 아라비카 원두</p>
+                            <div class="product-price">15,000원</div>
+                            <button class="add-to-cart" onclick="addToCart('coffee1')">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="coffee">
+                        <img src="/placeholder.svg?height=250&width=300" alt="콜롬비아 커피">
+                        <div class="product-info">
+                            <h3>콜롬비아 커피</h3>
+                            <p class="product-origin">원산지: 콜롬비아</p>
+                            <p class="product-description">부드럽고 균형잡힌 맛의 프리미엄 커피</p>
+                            <div class="product-price">18,000원</div>
+                            <button class="add-to-cart" onclick="addToCart('coffee2')">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <!-- 초콜릿 제품들 -->
+                    <div class="product-card" data-category="chocolate">
+                        <img src="/placeholder.svg?height=250&width=300" alt="가나 다크 초콜릿">
+                        <div class="product-info">
+                            <h3>가나 다크 초콜릿</h3>
+                            <p class="product-origin">원산지: 가나</p>
+                            <p class="product-description">카카오 70% 프리미엄 다크 초콜릿</p>
+                            <div class="product-price">8,000원</div>
+                            <button class="add-to-cart" onclick="addToCart('chocolate1')">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="chocolate">
+                        <img src="/placeholder.svg?height=250&width=300" alt="에콰도르 밀크 초콜릿">
+                        <div class="product-info">
+                            <h3>에콰도르 밀크 초콜릿</h3>
+                            <p class="product-origin">원산지: 에콰도르</p>
+                            <p class="product-description">부드럽고 달콤한 프리미엄 밀크 초콜릿</p>
+                            <div class="product-price">7,000원</div>
+                            <button class="add-to-cart" onclick="addToCart('chocolate2')">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <!-- 차 제품들 -->
+                    <div class="product-card" data-category="tea">
+                        <img src="/placeholder.svg?height=250&width=300" alt="스리랑카 홍차">
+                        <div class="product-info">
+                            <h3>스리랑카 홍차</h3>
+                            <p class="product-origin">원산지: 스리랑카</p>
+                            <p class="product-description">향긋하고 진한 맛의 프리미엄 홍차</p>
+                            <div class="product-price">12,000원</div>
+                            <button class="add-to-cart" onclick="addToCart('tea1')">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <!-- 설탕 제품들 -->
+                    <div class="product-card" data-category="sugar">
+                        <img src="/placeholder.svg?height=250&width=300" alt="필리핀 유기농 설탕">
+                        <div class="product-info">
+                            <h3>필리핀 유기농 설탕</h3>
+                            <p class="product-origin">원산지: 필리핀</p>
+                            <p class="product-description">자연 그대로의 단맛, 유기농 인증 설탕</p>
+                            <div class="product-price">5,000원</div>
+                            <button class="add-to-cart" onclick="addToCart('sugar1')">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 장바구니 요약 -->
+        <section class="cart-summary" id="cartSummary">
+            <div class="container">
+                <h3>장바구니</h3>
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <strong>총 금액: <span id="totalPrice">0</span>원</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fair Trade Korea</h3>
+                    <p>공정무역을 통해 더 나은 세상을 만들어갑니다</p>
+                </div>
+                <div class="footer-section">
+                    <h4>연락처</h4>
+                    <ul>
+                        <li>전화: 02-1234-5678</li>
+                        <li>이메일: info@fairtrade.co.kr</li>
+                        <li>주소: 서울시 강남구 테헤란로 123</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>정보</h4>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">사업자정보</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fair Trade Korea. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 로그인 팝업 -->
+    <div id="loginPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>로그인</h3>
+                <button class="close-btn" onclick="closePopup()">&times;</button>
+            </div>
+            <form class="login-form">
+                <input type="email" placeholder="이메일" required>
+                <input type="password" placeholder="비밀번호" required>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/products.js"></script>
+</body>
+</html>
