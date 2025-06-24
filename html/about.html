@@ -1,152 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>공정무역 소개 - Fair Trade Korea</title>
-    <link rel="stylesheet" href="../css/about.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/about.css" />
+  </head>
+  <body>
     <!-- 헤더 영역 - 모든 페이지에서 동일 -->
     <header class="header">
-        <div class="container">
-            <div class="logo" onclick="location.href='main.html'">
-                <h1>Fair Trade Korea</h1>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="main.html">홈</a></li>
-                    <li><a href="about.html" class="active">공정무역 소개</a></li>
-                    <li><a href="products.html">제품</a></li>
-                    <li><a href="contact.html">문의</a></li>
-                    <li><a href="#" onclick="showLoginPopup()">로그인</a></li>
-                </ul>
-            </nav>
+      <div class="container">
+        <div class="logo" onclick="location.href='main.html'">
+          <h1>Fair Trade Korea</h1>
         </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="main.html">홈</a></li>
+            <li><a href="about.html" class="active">공정무역 소개</a></li>
+            <li><a href="products.html">제품</a></li>
+            <li><a href="contact.html">문의</a></li>
+            <li><a href="#" onclick="showLoginPopup()">로그인</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main-content">
-        <!-- 페이지 제목 -->
-        <section class="page-header">
-            <div class="container">
-                <h1>공정무역이란?</h1>
-                <p>지속가능한 발전을 위한 공정한 거래</p>
-            </div>
-        </section>
+      <!-- 페이지 제목 -->
+      <section class="page-header">
+        <div class="container">
+          <h1>공정무역이란?</h1>
+          <p>지속가능한 발전을 위한 공정한 거래</p>
+        </div>
+      </section>
 
-        <!-- 공정무역 정의 -->
-        <section class="definition-section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="text-content">
-                        <h2>공정무역의 정의</h2>
-                        <p>공정무역은 개발도상국의 생산자와 노동자들에게 더 나은 거래 조건을 제공하고 그들의 권리를 보장하는 사회운동이자 시장 기반 접근법입니다.</p>
-                        <p>공정무역은 지속가능한 발전에 기여하며, 소외된 생산자, 특히 여성과 원주민들에게 더 나은 거래 조건을 제공합니다.</p>
-                    </div>
-                    <div class="image-content">
-                        <img src="/placeholder.svg?height=300&width=400" alt="공정무역 농장">
-                    </div>
-                </div>
+      <!-- 공정무역 정의 -->
+      <section class="definition-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="text-content">
+              <h2>공정무역의 정의</h2>
+              <p>
+                공정무역은 개발도상국의 생산자와 노동자들에게 더 나은 거래
+                조건을 제공하고 그들의 권리를 보장하는 사회운동이자 시장 기반
+                접근법입니다.
+              </p>
+              <p>
+                공정무역은 지속가능한 발전에 기여하며, 소외된 생산자, 특히
+                여성과 원주민들에게 더 나은 거래 조건을 제공합니다.
+              </p>
             </div>
-        </section>
+            <div class="image-content">
+              <img
+                src="/placeholder.svg?height=300&width=400"
+                alt="공정무역 농장"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- 공정무역 원칙 -->
-        <section class="principles-section">
-            <div class="container">
-                <h2>공정무역 10대 원칙</h2>
-                <div class="principles-grid">
-                    <div class="principle-card" onclick="toggleCard(this)">
-                        <h3>1. 소외된 생산자를 위한 기회 창출</h3>
-                        <p class="principle-detail">경제적으로 불리한 소규모 생산자들에게 시장 접근 기회를 제공합니다.</p>
-                    </div>
-                    <div class="principle-card" onclick="toggleCard(this)">
-                        <h3>2. 투명성과 책임감</h3>
-                        <p class="principle-detail">모든 거래 과정에서 투명성을 유지하고 책임감 있게 행동합니다.</p>
-                    </div>
-                    <div class="principle-card" onclick="toggleCard(this)">
-                        <h3>3. 공정한 거래 관행</h3>
-                        <p class="principle-detail">생산자의 사회적, 경제적, 환경적 복지를 고려한 거래를 실시합니다.</p>
-                    </div>
-                    <div class="principle-card" onclick="toggleCard(this)">
-                        <h3>4. 공정한 가격 지불</h3>
-                        <p class="principle-detail">생산자가 지속가능한 생활을 할 수 있는 공정한 가격을 지불합니다.</p>
-                    </div>
-                </div>
+      <!-- 공정무역 원칙 -->
+      <section class="principles-section">
+        <div class="container">
+          <h2>공정무역 10대 원칙</h2>
+          <div class="principles-grid">
+            <div class="principle-card" onclick="toggleCard(this)">
+              <h3>1. 소외된 생산자를 위한 기회 창출</h3>
+              <p class="principle-detail">
+                경제적으로 불리한 소규모 생산자들에게 시장 접근 기회를
+                제공합니다.
+              </p>
             </div>
-        </section>
+            <div class="principle-card" onclick="toggleCard(this)">
+              <h3>2. 투명성과 책임감</h3>
+              <p class="principle-detail">
+                모든 거래 과정에서 투명성을 유지하고 책임감 있게 행동합니다.
+              </p>
+            </div>
+            <div class="principle-card" onclick="toggleCard(this)">
+              <h3>3. 공정한 거래 관행</h3>
+              <p class="principle-detail">
+                생산자의 사회적, 경제적, 환경적 복지를 고려한 거래를 실시합니다.
+              </p>
+            </div>
+            <div class="principle-card" onclick="toggleCard(this)">
+              <h3>4. 공정한 가격 지불</h3>
+              <p class="principle-detail">
+                생산자가 지속가능한 생활을 할 수 있는 공정한 가격을 지불합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- 통계 섹션 -->
-        <section class="statistics-section">
-            <div class="container">
-                <h2>공정무역 현황</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="1800">0</div>
-                        <div class="stat-label">생산자 조직</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="75">0</div>
-                        <div class="stat-label">참여 국가</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="180">0</div>
-                        <div class="stat-label">만명 생산자</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="30000">0</div>
-                        <div class="stat-label">제품 종류</div>
-                    </div>
-                </div>
+      <!-- 통계 섹션 -->
+      <section class="statistics-section">
+        <div class="container">
+          <h2>공정무역 현황</h2>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-target="1800">0</div>
+              <div class="stat-label">생산자 조직</div>
             </div>
-        </section>
+            <div class="stat-item">
+              <div class="stat-number" data-target="75">0</div>
+              <div class="stat-label">참여 국가</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="180">0</div>
+              <div class="stat-label">만명 생산자</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="30000">0</div>
+              <div class="stat-label">제품 종류</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Fair Trade Korea</h3>
-                    <p>공정무역을 통해 더 나은 세상을 만들어갑니다</p>
-                </div>
-                <div class="footer-section">
-                    <h4>연락처</h4>
-                    <ul>
-                        <li>전화: 02-1234-5678</li>
-                        <li>이메일: info@fairtrade.co.kr</li>
-                        <li>주소: 서울시 강남구 테헤란로 123</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>정보</h4>
-                    <ul>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">사업자정보</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fair Trade Korea. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Fair Trade Korea</h3>
+            <p>공정무역을 통해 더 나은 세상을 만들어갑니다</p>
+          </div>
+          <div class="footer-section">
+            <h4>연락처</h4>
+            <ul>
+              <li>전화: 02-1234-5678</li>
+              <li>이메일: info@fairtrade.co.kr</li>
+              <li>주소: 서울시 강남구 테헤란로 123</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>정보</h4>
+            <ul>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">사업자정보</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Fair Trade Korea. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- 로그인 팝업 -->
     <div id="loginPopup" class="popup-overlay">
-        <div class="popup-content">
-            <div class="popup-header">
-                <h3>로그인</h3>
-                <button class="close-btn" onclick="closePopup()">&times;</button>
-            </div>
-            <form class="login-form">
-                <input type="email" placeholder="이메일" required>
-                <input type="password" placeholder="비밀번호" required>
-                <button type="submit">로그인</button>
-            </form>
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>로그인</h3>
+          <button class="close-btn" onclick="closePopup()">&times;</button>
         </div>
+        <form class="login-form">
+          <input type="email" placeholder="이메일" required />
+          <input type="password" placeholder="비밀번호" required />
+          <button type="submit">로그인</button>
+        </form>
+      </div>
     </div>
 
     <script src="../js/about.js"></script>
-</body>
+  </body>
 </html>
