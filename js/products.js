@@ -1,11 +1,7 @@
-// products.js - 제품 페이지 JavaScript 기능
-
-// 장바구니 객체
 const cart = {
   items: [],
   total: 0,
 
-  // 제품 추가 메서드
   addItem: function (productId, name, price) {
     const existingItem = this.items.find((item) => item.id === productId);
 
@@ -24,21 +20,18 @@ const cart = {
     this.updateDisplay();
   },
 
-  // 제품 제거 메서드
   removeItem: function (productId) {
     this.items = this.items.filter((item) => item.id !== productId);
     this.updateTotal();
     this.updateDisplay();
   },
 
-  // 총액 계산 메서드
   updateTotal: function () {
     this.total = this.items.reduce((sum, item) => {
       return sum + item.price * item.quantity;
     }, 0);
   },
 
-  // 화면 업데이트 메서드
   updateDisplay: function () {
     const cartItems = document.getElementById("cartItems");
     const totalPrice = document.getElementById("totalPrice");
@@ -67,7 +60,6 @@ const cart = {
   },
 };
 
-// 제품 데이터 객체
 const products = {
   coffee1: { name: "에티오피아 유기농 커피", price: 15000 },
   coffee2: { name: "콜롬비아 커피", price: 18000 },
@@ -77,27 +69,18 @@ const products = {
   sugar1: { name: "필리핀 유기농 설탕", price: 5000 },
 };
 
-// DOM이 로드된 후 실행
 document.addEventListener("DOMContentLoaded", () => {
-  // 초기 장바구니 표시 업데이트
   cart.updateDisplay();
-
-  // 제품 카드에 애니메이션 효과 추가
   addProductAnimations();
 });
 
-// 제품 필터링 함수
 function filterProducts(category) {
   const productCards = document.querySelectorAll(".product-card");
   const filterButtons = document.querySelectorAll(".filter-btn");
 
-  // 모든 버튼의 active 클래스 제거
   filterButtons.forEach((btn) => btn.classList.remove("active"));
-
-  // 클릭된 버튼에 active 클래스 추가
   event.target.classList.add("active");
 
-  // 제품 카드 필터링
   productCards.forEach((card) => {
     const cardCategory = card.getAttribute("data-category");
 
@@ -110,17 +93,14 @@ function filterProducts(category) {
   });
 }
 
-// 장바구니에 제품 추가 함수
 function addToCart(productId) {
   const product = products[productId];
 
   if (product) {
     cart.addItem(productId, product.name, product.price);
 
-    // 성공 메시지 표시
     showMessage(`${product.name}이(가) 장바구니에 추가되었습니다!`, "success");
 
-    // 버튼 애니메이션 효과
     const button = event.target;
     const originalText = button.textContent;
     button.textContent = "추가됨!";
@@ -133,7 +113,6 @@ function addToCart(productId) {
   }
 }
 
-// 제품 카드 애니메이션 추가 함수
 function addProductAnimations() {
   const productCards = document.querySelectorAll(".product-card");
 
@@ -142,7 +121,6 @@ function addProductAnimations() {
     card.style.transform = "translateY(30px)";
     card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
 
-    // 순차적으로 애니메이션 실행
     setTimeout(() => {
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
@@ -150,7 +128,6 @@ function addProductAnimations() {
   });
 }
 
-// 메시지 표시 함수
 function showMessage(message, type) {
   const existingMessage = document.querySelector(".message");
   if (existingMessage) {
@@ -181,7 +158,6 @@ function showMessage(message, type) {
   }, 3000);
 }
 
-// CSS 애니메이션 추가
 const style = document.createElement("style");
 style.textContent = `
     @keyframes fadeIn {
