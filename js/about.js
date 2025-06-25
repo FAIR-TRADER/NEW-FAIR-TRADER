@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  animateStats();
   window.addEventListener("scroll", handleScrollAnimations);
 });
 
@@ -25,6 +24,10 @@ function animateStats() {
   const statNumbers = document.querySelectorAll(".stat-number");
 
   statNumbers.forEach((stat) => {
+    if (stat.getAttribute("data-animated") === "true") {
+      return;
+    }
+
     const target = Number.parseInt(stat.getAttribute("data-target"));
     const duration = 2000;
     const increment = target / (duration / 16);
@@ -35,6 +38,7 @@ function animateStats() {
       if (current >= target) {
         current = target;
         clearInterval(timer);
+        stat.setAttribute("data-animated", "true");
       }
 
       stat.textContent = Math.floor(current).toLocaleString();
@@ -44,6 +48,7 @@ function animateStats() {
 
 function handleScrollAnimations() {
   const elements = document.querySelectorAll(".principle-card, .stat-item");
+  const statisticsSection = document.querySelector(".statistics-section");
 
   elements.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
@@ -54,6 +59,19 @@ function handleScrollAnimations() {
       element.style.transform = "translateY(0)";
     }
   });
+
+  if (statisticsSection) {
+    const sectionTop = statisticsSection.getBoundingClientRect().top;
+    const sectionVisible = window.innerHeight * 0.7;
+
+    if (
+      sectionTop < sectionVisible &&
+      !statisticsSection.getAttribute("data-animated")
+    ) {
+      statisticsSection.setAttribute("data-animated", "true");
+      animateStats();
+    }
+  }
 }
 
 window.addEventListener("load", () => {
