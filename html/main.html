@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fair Trade Korea - 공정무역으로 더 나은 세상을</title>
+    <title>페어트레이더 - 공정무역으로 더 나은 세상을</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // "다시 보지 않기"가 설정되어 있지 않으면 팝업을 띄움
-        if (!localStorage.getItem("hideWelcomePopup")) {
-          window.open(
-            "popup.html",
-            "welcomePopup",
-            "width=420,height=320,resizable=no,scrollbars=no"
-          );
-        }
-      });
-    </script>
+    <link rel="stylesheet" href="../css/popup.css" />
   </head>
   <body>
+    <div id="welcomeModal" class="welcome-modal-overlay">
+      <div class="welcome-modal-content">
+        <h2>페어트레이더에 오신 것을 환영합니다!</h2>
+        <p>공정무역으로 더 나은 세상을 함께 만들어가요.</p>
+        <div class="welcome-modal-buttons">
+          <button onclick="neverShowAgain()" class="welcome-btn-primary">
+            다시 보지 않기
+          </button>
+          <button onclick="hideWelcomeModal()" class="welcome-btn-secondary">
+            나가기
+          </button>
+        </div>
+      </div>
+    </div>
+
     <header class="header">
       <div class="container">
         <div class="logo" onclick="location.href='main.html'">
-          <h1>Fair Trade Korea</h1>
+          <h1>페어트레이더</h1>
         </div>
 
         <nav class="nav">
@@ -84,10 +88,34 @@
         </div>
       </section>
 
+      <!-- 공정무역 현황 통계 섹션 추가 -->
+      <section class="statistics-section">
+        <div class="container">
+          <h2>공정무역 현황</h2>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-target="1800">0</div>
+              <div class="stat-label">생산자 조직</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="75">0</div>
+              <div class="stat-label">참여 국가</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="180">0</div>
+              <div class="stat-label">만명 생산자</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="30000">0</div>
+              <div class="stat-label">제품 종류</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="products-preview" id="products-section">
         <div class="container">
           <h2>인기 공정무역 제품</h2>
-          <!-- 표 형태로 제품 정보 표시 -->
           <table class="products-table">
             <thead>
               <tr>
@@ -145,7 +173,6 @@
           </div>
           <div class="footer-section">
             <h4>연락처</h4>
-            <!-- 목록 형태로 연락처 정보 -->
             <ul>
               <li>전화: 02-1234-5678</li>
               <li>이메일: info@fairtrade.co.kr</li>
@@ -166,7 +193,7 @@
         </div>
       </div>
     </footer>
-
     <script src="../js/main.js"></script>
+    <script src="../js/popup.js"></script>
   </body>
 </html>
