@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} /* 모든 요소 기본 마진/패딩 제거하고 박스사이징 설정 */
+} /* 모든 요소 기본 margin/padding 제거하고 박스사이징 설정 */
 
 body {
   font-family: "Arial", sans-serif;
@@ -200,49 +200,49 @@ body {
   opacity: 0.9;
 } /* 통계 라벨 스타일 */
 
-/* 푸터 스타일 */
+/* footer 스타일 */
 .footer {
   background: #1a3d1f;
   color: white;
   padding: 3rem 0 1rem;
-} /* 푸터 기본 스타일 */
+} /* footer 기본 스타일 */
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 2rem;
-} /* 푸터 콘텐츠 플렉스 레이아웃 */
+} /* footer 콘텐츠 플렉스 레이아웃 */
 
 .footer-section h3,
 .footer-section h4 {
   margin-bottom: 1rem;
   color: #4a7c59;
-} /* 푸터 섹션 제목 */
+} /* footer 섹션 제목 */
 
 .footer-section ul {
   list-style: none;
-} /* 푸터 리스트 스타일 제거 */
+} /* footer 리스트 스타일 제거 */
 
 .footer-section ul li {
   margin-bottom: 0.5rem;
-} /* 푸터 리스트 아이템 간격 */
+} /* footer 리스트 아이템 간격 */
 
 .footer-section a {
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
-} /* 푸터 링크 스타일 */
+} /* footer 링크 스타일 */
 
 .footer-section a:hover {
   color: #4a7c59;
-} /* 푸터 링크 호버 효과 */
+} /* footer 링크 호버 효과 */
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid #4a7c59;
-} /* 푸터 하단 스타일 */
+} /* footer 하단 스타일 */
 
 /* 팝업 스타일 */
 .popup-overlay {
