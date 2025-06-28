@@ -1,45 +1,109 @@
-@import url("main.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /* 모든 요소 기본 margin/padding 제거하고 박스사이징 설정 */
 
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+} /* 기본 폰트와 색상 설정 */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+} /* 컨테이너 최대 너비와 중앙 정렬 */
+
+/* 헤더 스타일 */
+.header {
+  background: #2c5530;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} /* 헤더 기본 스타일 */
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} /* 헤더 컨테이너 플렉스 레이아웃 */
+
+.logo {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+} /* 로고 호버 효과 */
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+} /* 로고 텍스트 크기 */
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+} /* 네비게이션 메뉴 플렉스 레이아웃 */
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+} /* 네비게이션 링크 스타일 */
+
+.nav a:hover,
+.nav a.active {
+  background-color: #1a3d1f;
+} /* 네비게이션 링크 호버/활성 상태 */
+
+/* 페이지 헤더 */
 .page-header {
   background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
   color: white;
   padding: 3rem 0;
   text-align: center;
-}
+} /* 페이지 상단 헤더 그라디언트 배경 */
 
 .page-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-}
+} /* 페이지 제목 크기 */
 
 .page-header p {
   font-size: 1.2rem;
   opacity: 0.9;
-}
+} /* 페이지 설명 텍스트 */
 
+/* 정의 섹션 */
 .definition-section {
   padding: 4rem 0;
   background: #f8f9fa;
-}
+} /* 정의 섹션 배경색과 패딩 */
 
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-}
+} /* 2열 그리드 레이아웃 */
 
 .text-content h2 {
   color: #2c5530;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-}
+} /* 섹션 제목 스타일 */
 
 .text-content p {
   margin-bottom: 1rem;
   line-height: 1.8;
   font-size: 1.1rem;
-}
+} /* 본문 텍스트 스타일 */
 
 .image-content img {
   width: 100%;
@@ -47,24 +111,25 @@
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+} /* 이미지 스타일 */
 
+/* 원칙 섹션 */
 .principles-section {
   padding: 4rem 0;
-}
+} /* 원칙 섹션 패딩 */
 
 .principles-section h2 {
   text-align: center;
   color: #2c5530;
   margin-bottom: 3rem;
   font-size: 2rem;
-}
+} /* 원칙 섹션 제목 */
 
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-}
+} /* 원칙 카드 그리드 레이아웃 */
 
 .principle-card {
   background: white;
@@ -74,18 +139,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border-left: 4px solid #2c5530;
-}
+} /* 원칙 카드 기본 스타일 */
 
 .principle-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+} /* 원칙 카드 호버 효과 */
 
 .principle-card h3 {
   color: #2c5530;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-}
+} /* 원칙 카드 제목 */
 
 .principle-detail {
   display: none;
@@ -94,79 +159,185 @@
   border-top: 1px solid #eee;
   color: #666;
   line-height: 1.6;
-}
+} /* 원칙 카드 상세 내용 */
 
 .principle-card.active .principle-detail {
   display: block;
-}
+} /* 활성 상태일 때 상세 내용 표시 */
 
+/* 통계 섹션 */
 .statistics-section {
   background: #2c5530;
   color: white;
   padding: 4rem 0;
   text-align: center;
-}
+} /* 통계 섹션 배경과 텍스트 색상 */
 
 .statistics-section h2 {
   margin-bottom: 3rem;
   font-size: 2rem;
-}
+} /* 통계 섹션 제목 */
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-}
+} /* 통계 그리드 레이아웃 */
 
 .stat-item {
   padding: 2rem;
-}
+} /* 통계 아이템 패딩 */
 
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  color: #8b4513;
+  color: #aa4d34;
   margin-bottom: 0.5rem;
-}
+} /* 통계 숫자 스타일 */
 
 .stat-label {
   font-size: 1.1rem;
   opacity: 0.9;
-}
+} /* 통계 라벨 스타일 */
 
+/* footer 스타일 */
+.footer {
+  background: #1a3d1f;
+  color: white;
+  padding: 3rem 0 1rem;
+} /* footer 기본 스타일 */
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+} /* footer 콘텐츠 플렉스 레이아웃 */
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: #4a7c59;
+} /* footer 섹션 제목 */
+
+.footer-section ul {
+  list-style: none;
+} /* footer 리스트 스타일 제거 */
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+} /* footer 리스트 아이템 간격 */
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+} /* footer 링크 스타일 */
+
+.footer-section a:hover {
+  color: #4a7c59;
+} /* footer 링크 호버 효과 */
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #4a7c59;
+} /* footer 하단 스타일 */
+
+/* 팝업 스타일 */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+} /* 팝업 오버레이 */
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+} /* 팝업 콘텐츠 */
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+} /* 팝업 헤더 */
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+} /* 팝업 닫기 버튼 */
+
+.login-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+} /* 로그인 폼 입력 필드 */
+
+.login-form button {
+  width: 100%;
+  background: #2c5530;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+} /* 로그인 폼 버튼 */
+
+/* 반응형 디자인 - 태블릿 */
 @media (max-width: 768px) {
   .content-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
+  } /* 1열로 변경 */
 
   .page-header h1 {
     font-size: 2rem;
-  }
+  } /* 제목 크기 줄임 */
 
   .text-content h2 {
     font-size: 1.5rem;
-  }
+  } /* 섹션 제목 크기 줄임 */
 
   .principles-grid {
     grid-template-columns: 1fr;
-  }
+  } /* 원칙 카드 1열로 */
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } /* 통계 2열로 */
 
   .stat-number {
     font-size: 2.5rem;
-  }
+  } /* 통계 숫자 크기 줄임 */
 }
 
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: 1fr;
-  }
+  } /* 모바일에서 통계 1열로 */
 
   .stat-number {
     font-size: 2rem;
-  }
+  } /* 모바일에서 통계 숫자 더 작게 */
 }

@@ -8,11 +8,13 @@
     <link rel="icon" href="../images/icon.png" />
   </head>
   <body>
+    <!-- 헤더 영역 -->
     <header class="header">
       <div class="container">
         <div class="logo" onclick="location.href='main.html'">
           <h1>페어트레이더</h1>
         </div>
+        <!-- 로고 클릭하면 메인페이지로 이동 -->
         <nav class="nav">
           <ul>
             <li><a href="main.html">홈</a></li>
@@ -22,16 +24,22 @@
             <li><a href="#">로그인</a></li>
           </ul>
         </nav>
+        <!-- 네비게이션 메뉴, 현재 페이지(active) 표시 -->
       </div>
     </header>
 
+    <!-- 메인 콘텐츠 -->
     <main class="main-content">
+      <!-- 페이지 상단 헤더 -->
       <section class="page-header">
         <div class="container">
           <h1>문의하기</h1>
           <p>궁금한 점이 있으시면 언제든 연락주세요</p>
         </div>
       </section>
+      <!-- 페이지 제목과 설명 -->
+
+      <!-- 연락처 안내 섹션 -->
       <section class="contact-info">
         <div class="container">
           <div class="contact-grid">
@@ -53,6 +61,9 @@
           </div>
         </div>
       </section>
+      <!-- 전화·이메일·방문 상담 안내 카드 -->
+
+      <!-- 온라인 문의 폼 섹션 -->
       <section class="contact-form-section">
         <div class="container">
           <div class="form-container">
@@ -62,16 +73,19 @@
                 <label for="name">이름 *</label>
                 <input type="text" id="name" name="name" required />
               </div>
+              <!-- 이름 입력 필드 -->
 
               <div class="form-group">
                 <label for="email">이메일 *</label>
                 <input type="email" id="email" name="email" required />
               </div>
+              <!-- 이메일 입력 필드 -->
 
               <div class="form-group">
                 <label for="phone">전화번호</label>
                 <input type="tel" id="phone" name="phone" />
               </div>
+              <!-- 전화번호 입력 필드 (선택사항) -->
 
               <div class="form-group">
                 <label for="category">문의 유형 *</label>
@@ -83,11 +97,13 @@
                   <option value="general">일반 문의</option>
                 </select>
               </div>
+              <!-- 문의 유형 드롭다운 -->
 
               <div class="form-group">
                 <label for="subject">제목 *</label>
                 <input type="text" id="subject" name="subject" required />
               </div>
+              <!-- 문의 제목 입력 필드 -->
 
               <div class="form-group">
                 <label for="message">문의 내용 *</label>
@@ -98,6 +114,7 @@
                   required
                 ></textarea>
               </div>
+              <!-- 문의 내용 입력 텍스트영역 -->
 
               <div class="form-group checkbox-group">
                 <input type="checkbox" id="privacy" name="privacy" required />
@@ -105,13 +122,16 @@
                   >개인정보 수집 및 이용에 동의합니다 *</label
                 >
               </div>
+              <!-- 개인정보 수집 동의 체크박스 -->
 
               <button type="submit" class="submit-btn">문의하기</button>
             </form>
+            <!-- 문의 제출 버튼 -->
           </div>
         </div>
       </section>
 
+      <!-- FAQ 섹션 -->
       <section class="faq-section">
         <div class="container">
           <h2>자주 묻는 질문</h2>
@@ -129,6 +149,7 @@
                 </p>
               </div>
             </div>
+            <!-- FAQ 1: 인증 관련 -->
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
@@ -142,6 +163,7 @@
                 </p>
               </div>
             </div>
+            <!-- FAQ 2: 배송 관련 -->
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
@@ -155,11 +177,14 @@
                 </p>
               </div>
             </div>
+            <!-- FAQ 3: 반품/교환 관련 -->
           </div>
         </div>
       </section>
+      <!-- FAQ 리스트와 답변 -->
     </main>
 
+    <!-- 푸터 영역 -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -167,6 +192,8 @@
             <h3>페어트레이더</h3>
             <p>공정무역을 통해 더 나은 세상을 만들어갑니다</p>
           </div>
+          <!-- 회사 소개 -->
+
           <div class="footer-section">
             <h4>연락처</h4>
             <ul>
@@ -175,6 +202,8 @@
               <li>주소: 대구광역시 달성군 구지면 창리로11길 93</li>
             </ul>
           </div>
+          <!-- 연락처 정보 -->
+
           <div class="footer-section">
             <h4>정보</h4>
             <ul>
@@ -183,13 +212,16 @@
               <li><a href="#">사업자정보</a></li>
             </ul>
           </div>
+          <!-- 법적 정보 링크들 -->
         </div>
         <div class="footer-bottom">
           <p>&copy; 2025 Fair Trade Korea. All rights reserved.</p>
         </div>
+        <!-- 저작권 정보 -->
       </div>
     </footer>
 
     <script src="../js/contact.js"></script>
+    <!-- 문의 페이지 자바스크립트 연결 -->
   </body>
 </html>

@@ -1,5 +1,6 @@
 @import url("main.css");
 
+/* 페이지 상단 헤더 */
 .page-header {
   background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
   color: white;
@@ -17,6 +18,7 @@
   opacity: 0.9;
 }
 
+/* 제품 필터 영역 */
 .filter-section {
   padding: 2rem 0;
   background: #f8f9fa;
@@ -47,6 +49,7 @@
   color: white;
 }
 
+/* 제품 목록(그리드) */
 .products-section {
   padding: 4rem 0;
 }
@@ -73,29 +76,35 @@
 .product-card img {
   width: 100%;
   height: 250px;
-  object-fit:cover;
+  object-fit: cover;
 }
+/* 제품 이미지 스타일 */
+
 .product-info {
   padding: 1.5rem;
 }
+/* 제품 정보 영역 패딩 */
 
 .product-info h3 {
   color: #2c5530;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
+/* 제품명 스타일 */
 
 .product-origin {
   color: #666;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
+/* 원산지 표시 */
 
 .product-description {
   color: #777;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+/* 상품 설명 */
 
 .product-price {
   font-size: 1.2rem;
@@ -103,6 +112,7 @@
   color: #8b4513;
   margin-bottom: 1rem;
 }
+/* 가격 표시 */
 
 .add-to-cart {
   width: 100%;
@@ -115,11 +125,13 @@
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
+/* 장바구니 버튼 스타일 */
 
 .add-to-cart:hover {
   background: #1a3d1f;
 }
 
+/* 장바구니 섹션 */
 .cart-summary {
   background: #f8f9fa;
   padding: 2rem 0;
@@ -149,10 +161,12 @@
   color: #2c5530;
 }
 
+/* 제품 필터링시 숨김 처리 */
 .product-card.hidden {
   display: none;
 }
 
+/* 반응형 디자인 */
 @media (max-width: 768px) {
   .page-header h1 {
     font-size: 2rem;

@@ -1,118 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("scroll", handleScrollAnimations);
-});
-
 function toggleCard(card) {
+  // 모든 원칙 카드를 선택 (NodeList로 가져옴)
   const allCards = document.querySelectorAll(".principle-card");
+
+  // 반복문을 돌며 클릭한 카드가 아닌 모든 카드의 active 클래스를 제거 (닫힘 상태로 만듦)
+  // 원래 active 클래스가 있는 카드는 열려있는 상태여서 클릭한 카드 외의 모든 카드를 닫기 위해 사용함
   allCards.forEach((c) => {
     if (c !== card) {
       c.classList.remove("active");
     }
   });
 
+  // 클릭한 카드의 active 클래스를 토글 (열려 있으면 닫고, 닫혀 있으면 열기)
   card.classList.toggle("active");
-
-  if (card.classList.contains("active")) {
-    card.style.transform = "scale(1.02)";
-    setTimeout(() => {
-      card.style.transform = "scale(1)";
-    }, 200);
-  }
+  // 한 번에 한 카드만 열릴 수 있으며 이미 열려있는 카드를 다시 클릭하면 닫을 수 있음
 }
-
-function animateStats() {
-  const statNumbers = document.querySelectorAll(".stat-number");
-
-  statNumbers.forEach((stat) => {
-    if (stat.getAttribute("data-animated") === "true") {
-      return;
-    }
-
-    const target = Number.parseInt(stat.getAttribute("data-target"));
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-        stat.setAttribute("data-animated", "true");
-      }
-
-      stat.textContent = Math.floor(current).toLocaleString();
-    }, 16);
-  });
-}
-
-function handleScrollAnimations() {
-  const elements = document.querySelectorAll(".principle-card, .stat-item");
-  const statisticsSection = document.querySelector(".statistics-section");
-
-  elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 150;
-
-    if (elementTop < window.innerHeight - elementVisible) {
-      element.style.opacity = "1";
-      element.style.transform = "translateY(0)";
-    }
-  });
-
-  if (statisticsSection) {
-    const sectionTop = statisticsSection.getBoundingClientRect().top;
-    const sectionVisible = window.innerHeight * 0.7;
-
-    if (
-      sectionTop < sectionVisible &&
-      !statisticsSection.getAttribute("data-animated")
-    ) {
-      statisticsSection.setAttribute("data-animated", "true");
-      animateStats();
-    }
-  }
-}
-
-window.addEventListener("load", () => {
-  const animatedElements = document.querySelectorAll(
-    ".principle-card, .stat-item"
-  );
-
-  animatedElements.forEach((element) => {
-    element.style.opacity = "0";
-    element.style.transform = "translateY(30px)";
-    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-  });
-
-  handleScrollAnimations();
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closePopup();
-  }
-
-  if (
-    event.key === "Enter" &&
-    event.target.classList.contains("principle-card")
-  ) {
-    toggleCard(event.target);
-  }
-});
-
-document.querySelectorAll(".principle-card").forEach((card) => {
-  card.setAttribute("tabindex", "0");
-  card.setAttribute("role", "button");
-  card.setAttribute("aria-expanded", "false");
-
-  card.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      toggleCard(this);
-
-      const isActive = this.classList.contains("active");
-      this.setAttribute("aria-expanded", isActive);
-    }
-  });
-});
