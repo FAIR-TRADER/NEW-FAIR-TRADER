@@ -87,7 +87,7 @@ body {
 }
 
 .cta-button {
-  background: #ff6b35;
+  background: #8b4513;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -98,7 +98,7 @@ body {
 }
 
 .cta-button:hover {
-  background: #e55a2b;
+  background: #6e3610;
 }
 
 .intro-section {
@@ -211,7 +211,7 @@ body {
 }
 
 .newsletter-form button {
-  background: #ff6b35;
+  background: #8b4513;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -221,7 +221,7 @@ body {
 }
 
 .newsletter-form button:hover {
-  background: #e55a2b;
+  background: #6e3610;
 }
 
 .footer {
@@ -339,7 +339,7 @@ body {
 }
 
 .notice-content button {
-  background: #ff6b35;
+  background: #8b4513;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -350,7 +350,7 @@ body {
 }
 
 .notice-content button:hover {
-  background: #e55a2b;
+  background: #6e3610;
 }
 
 .statistics-section {
@@ -378,7 +378,7 @@ body {
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  color: #ff6b35;
+  color: #8b4513;
   margin-bottom: 0.5rem;
 }
 
