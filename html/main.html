@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/popup.css" />
     <link rel="icon" href="../images/icon.png" />
   </head>
+  <!-- 메타 정보와 CSS 파일들 연결하는 부분 -->
+
   <body>
+    <!-- 환영 모달 팝업 -->
     <div id="welcomeModal" class="welcome-modal-overlay">
       <div class="welcome-modal-content">
         <h2>페어트레이더에 오신 것을 환영합니다!</h2>
@@ -21,14 +24,17 @@
             나가기
           </button>
         </div>
+        <!-- 다시 보지 않기와 나가기 버튼 -->
       </div>
     </div>
 
+    <!-- 헤더 영역 -->
     <header class="header">
       <div class="container">
         <div class="logo" onclick="location.href='main.html'">
           <h1>페어트레이더</h1>
         </div>
+        <!-- 로고 클릭하면 메인으로 이동 -->
 
         <nav class="nav">
           <ul>
@@ -39,10 +45,13 @@
             <li><a href="#">로그인</a></li>
           </ul>
         </nav>
+        <!-- 네비게이션 메뉴, 현재 페이지는 active 클래스 -->
       </div>
     </header>
 
+    <!-- 메인 콘텐츠 -->
     <main class="main-content">
+      <!-- 히어로 섹션 -->
       <section class="hero">
         <div class="hero-content">
           <h2>공정무역으로 더 나은 세상을 만들어가요</h2>
@@ -53,8 +62,10 @@
             제품 보러가기
           </button>
         </div>
+        <!-- 메인 타이틀과 CTA 버튼 -->
       </section>
 
+      <!-- 공정무역 소개 섹션 -->
       <section class="intro-section">
         <div class="container">
           <h2>공정무역이란?</h2>
@@ -66,19 +77,26 @@
                 생산자에게 공정한 가격을 지불하여 지속가능한 생산을 지원합니다
               </p>
             </div>
+            <!-- 공정한 거래 카드 -->
+
             <div class="intro-card">
               <img src="../images/envprotect.png" alt="환경 보호" />
               <h3>환경 보호</h3>
               <p>친환경적인 생산 방식으로 지구 환경을 보호합니다</p>
             </div>
+            <!-- 환경 보호 카드 -->
+
             <div class="intro-card">
               <img src="../images/rspnsblity.jpg" alt="사회적 책임" />
               <h3>사회적 책임</h3>
               <p>지역 사회 발전과 교육 지원을 통해 더 나은 미래를 만듭니다</p>
             </div>
+            <!-- 사회적 책임 카드 -->
           </div>
         </div>
       </section>
+
+      <!-- 통계 섹션 -->
       <section class="statistics-section">
         <div class="container">
           <h2>공정무역 현황</h2>
@@ -87,22 +105,30 @@
               <div class="stat-number" data-target="1800">0</div>
               <div class="stat-label">생산자 조직</div>
             </div>
+            <!-- 생산자 조직 수 통계 -->
+
             <div class="stat-item">
               <div class="stat-number" data-target="75">0</div>
               <div class="stat-label">참여 국가</div>
             </div>
+            <!-- 참여 국가 수 통계 -->
+
             <div class="stat-item">
               <div class="stat-number" data-target="180">0</div>
               <div class="stat-label">만명 생산자</div>
             </div>
+            <!-- 생산자 수 통계 -->
+
             <div class="stat-item">
               <div class="stat-number" data-target="30000">0</div>
               <div class="stat-label">제품 종류</div>
             </div>
+            <!-- 제품 종류 수 통계 -->
           </div>
         </div>
       </section>
 
+      <!-- 제품 미리보기 섹션 -->
       <section class="products-preview" id="products-section">
         <div class="container">
           <h2>인기 공정무역 제품</h2>
@@ -115,6 +141,8 @@
                 <th>인증</th>
               </tr>
             </thead>
+            <!-- 테이블 헤더 -->
+
             <tbody>
               <tr>
                 <td>유기농 커피</td>
@@ -122,23 +150,29 @@
                 <td>15,000원</td>
                 <td>공정무역 인증</td>
               </tr>
+              <!-- 커피 제품 정보 -->
+
               <tr>
                 <td>다크 초콜릿</td>
                 <td>가나</td>
                 <td>8,000원</td>
                 <td>공정무역 인증</td>
               </tr>
+              <!-- 초콜릿 제품 정보 -->
+
               <tr>
                 <td>유기농 설탕</td>
                 <td>필리핀</td>
                 <td>5,000원</td>
                 <td>유기농 인증</td>
               </tr>
+              <!-- 설탕 제품 정보 -->
             </tbody>
           </table>
         </div>
       </section>
 
+      <!-- 뉴스레터 구독 섹션 -->
       <section class="newsletter">
         <div class="container">
           <h2>공정무역 소식 받아보기</h2>
@@ -150,10 +184,12 @@
             />
             <button type="submit">구독하기</button>
           </form>
+          <!-- 이메일 입력하고 구독하기 버튼 -->
         </div>
       </section>
     </main>
 
+    <!-- 푸터 영역 -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -161,6 +197,8 @@
             <h3>Fair Trade Korea</h3>
             <p>공정무역을 통해 더 나은 세상을 만들어갑니다</p>
           </div>
+          <!-- 회사 소개 -->
+
           <div class="footer-section">
             <h4>연락처</h4>
             <ul>
@@ -169,6 +207,8 @@
               <li>주소: 대구광역시 달성군 구지면 창리로11길 93</li>
             </ul>
           </div>
+          <!-- 연락처 정보 -->
+
           <div class="footer-section">
             <h4>정보</h4>
             <ul>
@@ -177,13 +217,18 @@
               <li><a href="#">사업자정보</a></li>
             </ul>
           </div>
+          <!-- 법적 정보 링크들 -->
         </div>
+
         <div class="footer-bottom">
           <p>&copy; 2025 Fair Trade Korea. All rights reserved.</p>
         </div>
+        <!-- 저작권 정보 -->
       </div>
     </footer>
+
     <script src="../js/main.js"></script>
     <script src="../js/popup.js"></script>
+    <!-- 자바스크립트 파일들 연결 -->
   </body>
 </html>

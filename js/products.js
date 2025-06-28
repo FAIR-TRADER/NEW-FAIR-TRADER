@@ -18,19 +18,19 @@ const cart = {
 
     this.updateTotal();
     this.updateDisplay();
-  },
+  }, // 장바구니에 상품 추가하는 함수
 
   removeItem: function (productId) {
     this.items = this.items.filter((item) => item.id !== productId);
     this.updateTotal();
     this.updateDisplay();
-  },
+  }, // 장바구니에서 상품 삭제하는 함수
 
   updateTotal: function () {
     this.total = this.items.reduce((sum, item) => {
       return sum + item.price * item.quantity;
     }, 0);
-  },
+  }, // 장바구니 총액 계산하는 함수
 
   updateDisplay: function () {
     const cartItems = document.getElementById("cartItems");
@@ -57,7 +57,7 @@ const cart = {
     }
 
     totalPrice.textContent = this.total.toLocaleString();
-  },
+  }, // 장바구니 화면 업데이트하는 함수
 };
 
 const products = {
@@ -67,12 +67,12 @@ const products = {
   chocolate2: { name: "에콰도르 밀크 초콜릿", price: 7000 },
   tea1: { name: "스리랑카 홍차", price: 12000 },
   sugar1: { name: "필리핀 유기농 설탕", price: 5000 },
-};
+}; // 상품 정보 객체
 
 document.addEventListener("DOMContentLoaded", () => {
   cart.updateDisplay();
   addProductAnimations();
-});
+}); // 페이지 로드되면 장바구니 표시하고 상품 애니메이션 실행
 
 function filterProducts(category) {
   const productCards = document.querySelectorAll(".product-card");
@@ -91,7 +91,7 @@ function filterProducts(category) {
       card.style.display = "none";
     }
   });
-}
+} // 상품 카테고리별 필터링하는 함수
 
 function addToCart(productId) {
   const product = products[productId];
@@ -111,7 +111,7 @@ function addToCart(productId) {
       button.style.background = "#2c5530";
     }, 1000);
   }
-}
+} // 장바구니에 상품 추가하고 버튼 효과 주는 함수
 
 function addProductAnimations() {
   const productCards = document.querySelectorAll(".product-card");
@@ -126,7 +126,7 @@ function addProductAnimations() {
       card.style.transform = "translateY(0)";
     }, index * 100);
   });
-}
+} // 상품 카드 등장 애니메이션 함수
 
 function showMessage(message, type) {
   const existingMessage = document.querySelector(".message");
@@ -156,7 +156,7 @@ function showMessage(message, type) {
     messageDiv.style.animation = "slideOut 0.3s ease";
     setTimeout(() => messageDiv.remove(), 300);
   }, 3000);
-}
+} // 알림 메시지 보여주는 함수
 
 const style = document.createElement("style");
 style.textContent = `
@@ -175,4 +175,4 @@ style.textContent = `
         to { transform: translateX(100%); opacity: 0; }
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(style); // 애니메이션 CSS 동적으로 추가하는 부분

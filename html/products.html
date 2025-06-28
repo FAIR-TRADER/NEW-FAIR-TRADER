@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="../css/products.css" />
     <link rel="icon" href="../images/icon.png" />
   </head>
+  <!-- 제품 페이지 기본 설정 -->
+
   <body>
+    <!-- 헤더 영역 -->
     <header class="header">
       <div class="container">
         <div class="logo" onclick="location.href='main.html'">
           <h1>페어트레이더</h1>
         </div>
+        <!-- 로고 클릭하면 메인으로 이동 -->
+
         <nav class="nav">
           <ul>
             <li><a href="main.html">홈</a></li>
@@ -22,17 +27,22 @@
             <li><a href="#">로그인</a></li>
           </ul>
         </nav>
+        <!-- 네비게이션 메뉴, 제품 페이지 활성화 -->
       </div>
     </header>
 
+    <!-- 메인 콘텐츠 -->
     <main class="main-content">
+      <!-- 페이지 헤더 -->
       <section class="page-header">
         <div class="container">
           <h1>공정무역 제품</h1>
           <p>윤리적이고 지속가능한 제품들을 만나보세요</p>
         </div>
       </section>
+      <!-- 제품 페이지 제목과 설명 -->
 
+      <!-- 제품 필터 섹션 -->
       <section class="filter-section">
         <div class="container">
           <div class="filter-buttons">
@@ -52,12 +62,15 @@
               설탕
             </button>
           </div>
+          <!-- 카테고리별 필터 버튼들 -->
         </div>
       </section>
 
+      <!-- 제품 목록 섹션 -->
       <section class="products-section">
         <div class="container">
           <div class="products-grid" id="productsGrid">
+            <!-- 커피 제품 1 -->
             <div class="product-card" data-category="coffee">
               <img
                 src="../images/etcoffeebean.jpg?height=250&width=300"
@@ -76,6 +89,7 @@
               </div>
             </div>
 
+            <!-- 커피 제품 2 -->
             <div class="product-card" data-category="coffee">
               <img
                 src="../images/cbcoffee.jpg?height=250&width=300"
@@ -94,6 +108,7 @@
               </div>
             </div>
 
+            <!-- 초콜릿 제품 1 -->
             <div class="product-card" data-category="chocolate">
               <img
                 src="../images/ghanachoco.webp?height=250&width=300"
@@ -112,6 +127,7 @@
               </div>
             </div>
 
+            <!-- 초콜릿 제품 2 -->
             <div class="product-card" data-category="chocolate">
               <img
                 src="../images/eqchoco.png?height=250&width=300"
@@ -130,6 +146,7 @@
               </div>
             </div>
 
+            <!-- 차 제품 -->
             <div class="product-card" data-category="tea">
               <img
                 src="../images/srtea.webp?height=250&width=300"
@@ -148,9 +165,10 @@
               </div>
             </div>
 
+            <!-- 설탕 제품 -->
             <div class="product-card" data-category="sugar">
               <img
-                src="/placeholder.svg?height=250&width=300"
+                src="../images/sugar.jpg?height=250&width=300"
                 alt="필리핀 유기농 설탕"
               />
               <div class="product-info">
@@ -166,9 +184,11 @@
               </div>
             </div>
           </div>
+          <!-- 모든 제품 카드들을 그리드로 배치 -->
         </div>
       </section>
 
+      <!-- 장바구니 요약 섹션 -->
       <section class="cart-summary" id="cartSummary">
         <div class="container">
           <h3>장바구니</h3>
@@ -178,8 +198,10 @@
           </div>
         </div>
       </section>
+      <!-- 장바구니에 담긴 상품들과 총액 표시 -->
     </main>
 
+    <!-- 푸터 영역 (메인과 동일) -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -211,5 +233,6 @@
     </footer>
 
     <script src="../js/products.js"></script>
+    <!-- 제품 페이지 자바스크립트 연결 -->
   </body>
 </html>

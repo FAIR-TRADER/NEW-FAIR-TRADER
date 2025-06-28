@@ -1,5 +1,6 @@
 @import url("main.css");
 
+/* 페이지 상단 헤더 스타일 */
 .page-header {
   background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
   color: white;
@@ -17,6 +18,7 @@
   opacity: 0.9;
 }
 
+/* 연락처 안내 섹션 */
 .contact-info {
   padding: 4rem 0;
   background: #f8f9fa;
@@ -52,6 +54,7 @@
   color: #666;
 }
 
+/* 온라인 문의 폼 섹션 */
 .contact-form-section {
   padding: 4rem 0;
 }
@@ -128,6 +131,7 @@
   background: #1a3d1f;
 }
 
+/* FAQ 섹션 */
 .faq-section {
   padding: 4rem 0;
   background: #f8f9fa;
@@ -193,6 +197,7 @@
   display: block;
 }
 
+/* 반응형 디자인 - 태블릿 */
 @media (max-width: 768px) {
   .page-header h1 {
     font-size: 2rem;
@@ -212,6 +217,7 @@
   }
 }
 
+/* 반응형 디자인 - 모바일 */
 @media (max-width: 480px) {
   .form-container {
     padding: 1.5rem;
